@@ -5,7 +5,7 @@ include 'includes/authentication.php';
 include 'includes/db.php';
 include 'includes/function.php';
 include ("includes/header.php");
-$employee = getAllData($conn,'employee');
+$employee = getAllData($conn,'team');
 //for serial numbering;
 $dev = [];
 for($var=1;  $var <= count($employee); $var++  ){
@@ -36,12 +36,12 @@ $employee = $newArray;
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Staff Log</h4> </div>
+                        <h4 class="page-title">Teams Log</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
 
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Staff Log</li>
+                            <li class="active">Teams Log</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -55,7 +55,7 @@ $employee = $newArray;
                     echo '<div class="col-md-12">
                   <div class="inner-box posting">
                   <div class="alert alert-success alert-lg" role="alert">
-                  <h2 class="postin-title">✔ Successfull! '.$msg.' </h2>
+                  <h2 class="postin-title">'.$msg.' </h2>
                   <p>Thank you</p>
                   </div>
                   </div>
@@ -74,10 +74,10 @@ $employee = $newArray;
                   </div>';
                   } ?>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <a href="Add-Employee.php">
+                        <a href="AddTeams.php">
 
                             <div class="white-box" style="background-color: #95e297">
-                            <h3 class="box-title text-center"><strong style="font-size: 25px;"> ADD EMPLOYEE </strong></h3>
+                            <h3 class="box-title text-center"><strong style="font-size: 25px;"> ADD Teams </strong></h3>
 
                         </div>
                         </a>
@@ -90,17 +90,21 @@ $employee = $newArray;
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Staff Log</h3>
+                            <h3 class="box-title">Teams Log</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>logo</th>
                                             <th><a href="profile.php">Name</a></th>
-                                            <th>Email</th>
-                                            <th>Phone Number</th>
-                                            <th>School Category</th>
-                                            <th>Staff Status</th>
+                                            <th>Year Joined</th>
+                                            <th>fa1</th>
+                                            <th>fa2</th>
+                                            <th>fa3</th>
+                                            <th>facebook</th>
+                                            <th>twitter</th>
+                                            <th>instagram</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>
@@ -112,11 +116,16 @@ $employee = $newArray;
                                           ?>
                                           <tr>
                                             <td><?php echo $value['sn'] ?></td></td>
+                                            <td><img src="<?php echo $value['image'] ?>" height="50" width="50"></td>
                                             <td><?php echo $value['name'] ?></td>
-                                            <td><?php echo $value['email'] ?></td>
-                                            <td><?php echo $value['phone'] ?></td>
-                                            <td><?php echo $value['school_category'] ?></td>
-                                            <td><?php echo $value['staff_status'] ?></td>
+                                            <td><?php echo $value['year'] ?></td>
+                                            <td><?php echo $value['fa1'] ?></td>
+                                            <td><?php echo $value['fa2'] ?></td>
+                                            <td><?php echo $value['fa3'] ?></td>
+                                            <td><?php echo $value['facebook'] ?></td>
+                                            <td><?php echo $value['twitter'] ?></td>
+                                            <td><?php echo $value['instagram'] ?></td>
+
                                             <!-- <th>Date</th> -->
                                             <?php $urii = explode("/", $_SERVER['REQUEST_URI']);
                                               $retUrl = end($urii); ?>

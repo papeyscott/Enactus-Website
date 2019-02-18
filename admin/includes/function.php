@@ -274,17 +274,7 @@ function getEmployee($dbconn){
   }
 }
 
-function doesPhoneNumberExist($dbconn, $input){
-  $result = false;
-  $stmt = $dbconn->prepare("SELECT * FROM visitors WHERE phone = :tp");
-  $stmt->bindParam(":tp", $input);
-  $stmt->execute();
-  $count = $stmt->rowCount();
-  if($count>0){
-    $result = true;
-  }
-  return $result;
-}
+
 
 
 function insert($dbconn, $table, $parameters){

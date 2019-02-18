@@ -5,35 +5,47 @@ include 'includes/db.php';
 include 'includes/function.php';
 include 'includes/authentication.php';
 include ("includes/header.php");
+
+
 $error = [];
 if(array_key_exists('submit', $_POST)){
+
+  $ext = ["image/jpg", "image/JPG", "image/jpeg", "image/JPEG", "image/png", "image/PNG"];
+
+  if(empty($_FILES['upload']['name'])){
+    $error['upload'] = "Please choose file";
+  }
+  if(!in_array($_FILES['upload']['type'], $ext)){
+    $error['upload'] = " Please Upload teams logo";
+  }
   if(empty($_POST['name'])){
     $error['name']="Enter a name";
   }
 
+  if(empty($_POST['year'])){
+    $error['year']="What year did the team join";
+  }
+
+  if(empty($_POST['fa1'])){
+    $error['fa1']="who is the principal faculty advisor";
+  }
+
+
   
 
-  if(empty($_POST['address'])){
-    $error['address']="Enter address";
-  }
-
-  if(empty($_POST['school_category'])){
-    $error['school_category']="Enter category";
-  }
-
-  if(empty($_POST['staff_status'])){
-    $error['staff_status']="Enter staff_status";
-  }
-
   if(empty($error)){
-    insert($conn, 'employee', $_POST);
-    $success = "Employee Added";
-    // $succ = preg_replace('/\s+/', '_', $success);
-    // workRate($dbconn,$sess);
-    header("Location:View-Employee.php?success=$success");
-  }
-}
+    $ver['a'] = compressImage($_FILES,'upload',90, 'uploads/' );
+    // die($ver['a']);
 
+      $new['type'] = 1;
+        $new['image'] = $ver['a'];
+      $post = $new + $_POST ;
+    insert($conn, 'team', $post);
+    $message = "Successfull added";
+  header("Location:viewTeams.php?success=$message");
+
+}
+}
 ?>
 
 <!-- Page Content -->
@@ -42,12 +54,12 @@ if(array_key_exists('submit', $_POST)){
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Add Employee</h4> </div>
+                        <h4 class="page-title">Add Teams</h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
 
                         <ol class="breadcrumb">
                             <li><a href="index.php">Dashboard</a></li>
-                            <li class="active">Add Employee</li>
+                            <li class="active">Add Teams</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -79,10 +91,10 @@ if(array_key_exists('submit', $_POST)){
                   } ?>
                     <div class="col-md-12">
                         <div class="white-box">
-                            <h3 class="box-title">New Employee</h3>
+                            <h3 class="box-title">New Team</h3>
 
                         </div>
-<form class="needs-validation" action="" method="post" >
+<form class="needs-validation" action="" method="post" enctype="multipart/form-data">
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom01">Name</label>
@@ -90,7 +102,7 @@ if(array_key_exists('submit', $_POST)){
         <?php $display = displayErrors($error, 'name');
         echo $display ?>
       </div>
-      <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="Full name" value="" required>
+      <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="Team name" value="" required>
 
     </div>
     <div class="col-md-6 mb-3">
@@ -128,54 +140,35 @@ if(array_key_exists('submit', $_POST)){
 
     </div>
 
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom04">Facebook</label>
-      <div class="text-danger">
-        <?php $display = displayErrors($error, 'Facebook');
-        echo $display ?>
-      </div>
-      <textarea name="address" class="form-control" id="validationCustom04" required="">
-
-      </textarea>
-
+<div class="col-md-6 mb-3">
+      <label for="validationCustom03">Facebook</label>
+        <input type="text" name="facebook" class="form-control" id="validationCustom03" placeholder="Facebook" required>
 
     </div>
     <div class="col-md-6 mb-3">
-      <label for="validationCustom05">School Category</label>
-      <div class="text-danger">
-        <?php $display = displayErrors($error, 'school_category');
-        echo $display ?>
-      </div>
-      <select name="school_category" class="form-control" id="inlineFormCustomSelect" required="">
-        <option selected>Choose...</option>
-        <option >Primary</option>
-        <option >Secondary</option>
-        <option >Pre school</option>
-      </select>
+      <label for="validationCustom03">Twitter</label>
+        <input type="text" name="twitter" class="form-control" id="validationCustom03" placeholder="Twitter" required>
 
     </div>
-
     <div class="col-md-6 mb-3">
-      <label for="validationCustom05">Staff Status</label>
-      <div class="text-danger">
-        <?php $display = displayErrors($error, 'staff_status');
-        echo $display ?>
-      </div>
-      <select name="staff_status" class="form-control" id="inlineFormCustomSelect" required="">
-        <option selected>Choose...</option>
-        <option >Academic</option>
-        <option >Non-Academic</option>
-      </select>
+      <label for="validationCustom03">Instagram</label>
+        <input type="text" name="Instagram" class="form-control" id="validationCustom03" placeholder="Instagram" required>
 
     </div>
 
+     <div class="col-md-6 mb-3">
+      <?php $display = displayErrors($error, 'img');
+          echo $display ?>
+      <label for="validationCustom03">Logo</label>
+        <input type="file" name="upload"  placeholder="Logo" required>
 
-  </div>
-  <div class="form-group">
-    <!-- <div class="form-check">
-      <button class="btn " name="submit" type="submit"> </button>
-    </div> -->
-  </div><br>
+    </div>
+    
+    
+
+    
+
+  </div><br><br><br>
   <div class="text-center">
     <input class="btn btn-primary text-center" type="submit" name="submit" value="Submit form">
           <!-- <button  type="submit">Submit form</button> -->

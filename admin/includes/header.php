@@ -149,7 +149,7 @@ input:checked + .slider:before {
                     </li>
 
                      <li>
-                        <a href="View-Employee.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Employee Manager</a>
+                        <a href="viewTeams.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Teams</a>
                     </li>
                    <!--   <li>
                         <a href="View-Student.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Student Manager</a>
