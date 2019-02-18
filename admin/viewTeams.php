@@ -129,8 +129,8 @@ $employee = $newArray;
                                             <!-- <th>Date</th> -->
                                             <?php $urii = explode("/", $_SERVER['REQUEST_URI']);
                                               $retUrl = end($urii); ?>
-                                             <td> <a href="employee_profile.php?tdata=employee&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>">  <i class="btn btn-warning fa fa-pencil" aria-hidden="true"></i></a></td>
-                                              <td><a href="delete.php?tdata=employee&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>"><i class="btn btn-danger fa fa-trash" aria-hidden="true"></i></a></td>
+                                             <td> <a href="teamProfile.php?tdata=team&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>">  <i class="btn btn-warning fa fa-pencil" aria-hidden="true"></i></a></td>
+                                              <td><a href="delete.php?tdata=team&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>"><i class="btn btn-danger fa fa-trash" aria-hidden="true"></i></a></td>
                                                 </tr>
                                             <?php } ?>
 
