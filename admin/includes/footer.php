@@ -10,6 +10,10 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script>
+                
     <script src="styles/plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="styles/bootstrap/dist/js/bootstrap.min.js"></script>

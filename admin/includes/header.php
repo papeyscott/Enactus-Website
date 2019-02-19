@@ -149,8 +149,17 @@ input:checked + .slider:before {
                     </li>
 
                      <li>
-                        <a href="viewTeams.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Teams</a>
+                        <a href="viewTeams.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Teams</a>
                     </li>
+
+                    <li>
+                        <a href="viewAlumni.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Alumni</a>
+                    </li>
+
+                    <li>
+                        <a href="viewBoard.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Board of Directors</a>
+                    </li>
+
                    <!--   <li>
                         <a href="View-Student.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Student Manager</a>
                     </li>-->
