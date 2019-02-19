@@ -155,6 +155,9 @@ input:checked + .slider:before {
                     <li>
                         <a href="viewAlumni.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Alumni</a>
                     </li>
+                    <li>
+                        <a href="viewCampus.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Campus</a>
+                    </li>
 
                     <li>
                         <a href="viewBoard.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Board of Directors</a>
