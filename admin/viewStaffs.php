@@ -103,6 +103,7 @@ $employee = $newArray;
                                             <th>facebook</th>
                                             <th>twitter</th>
                                             <th>instagram</th>
+                                            <th>Linkedin</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
                                         </tr>
@@ -121,6 +122,7 @@ $employee = $newArray;
                                             <td><?php echo $value['facebook'] ?></td>
                                             <td><?php echo $value['twitter'] ?></td>
                                             <td><?php echo $value['instagram'] ?></td>
+                                             <td><?php echo $value['linkedin'] ?></td>
 
                                             <!-- <th>Date</th> -->
                                             <?php $urii = explode("/", $_SERVER['REQUEST_URI']);

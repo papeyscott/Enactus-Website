@@ -130,29 +130,29 @@ if(array_key_exists('submit', $_POST)){
 
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">Faculty Adviser 2</label>
-          <input type="text" name="fa2" class="form-control" id="validationCustom03" placeholder="Faculty Adviser 2" required>
+          <input type="text" name="fa2" class="form-control"  placeholder="Faculty Adviser 2" >
 
     </div>
 
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">Faculty Adviser 3</label>
-        <input type="text" name="fa3" class="form-control" id="validationCustom03" placeholder="Faculty Adviser 3" required>
+        <input type="text" name="fa3" class="form-control"  placeholder="Faculty Adviser 3" >
 
     </div>
 
 <div class="col-md-6 mb-3">
       <label for="validationCustom03">Facebook</label>
-        <input type="text" name="facebook" class="form-control" id="validationCustom03" placeholder="Facebook" required>
+        <input type="text" name="facebook" class="form-control"  placeholder="Facebook" >
 
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">Twitter</label>
-        <input type="text" name="twitter" class="form-control" id="validationCustom03" placeholder="Twitter" required>
+        <input type="text" name="twitter" class="form-control"  placeholder="Twitter" >
 
     </div>
     <div class="col-md-6 mb-3">
       <label for="validationCustom03">Instagram</label>
-        <input type="text" name="Instagram" class="form-control" id="validationCustom03" placeholder="Instagram" required>
+        <input type="text" name="Instagram" class="form-control"  placeholder="Instagram" >
 
     </div>
 

@@ -139,6 +139,11 @@ if(array_key_exists('submit', $_POST)){
         <input type="text" name="Instagram" class="form-control" id="validationCustom03" placeholder="Instagram" required>
 
     </div>
+     <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Linkedin</label>
+        <input type="text" name="linkedin" class="form-control" id="validationCustom03" placeholder="linkedin" required>
+
+    </div>
 
      <div class="col-md-6 mb-3">
       <?php $display = displayErrors($error, 'img');

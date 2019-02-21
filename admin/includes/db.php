@@ -13,7 +13,7 @@
           $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         }
         catch(PDOException $e) {
-                // die("Something Went Wrong");
+                 die("Something Went Wrong");
                 echo $e->getMessage();
         }
 

@@ -103,7 +103,7 @@ if(array_key_exists('submit', $_POST)){
                     <?php $display = displayErrors($error, 'name');
                     echo $display ?>
                   </div>
-                <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="Team name" value="<?php echo $value['name'] ?>" required>
+                <input type="text" name="name" class="form-control" id="validationCustom01" placeholder="ALumni name"  required>
               </div>
 
               <div class="col-md-6 mb-3">
@@ -112,7 +112,7 @@ if(array_key_exists('submit', $_POST)){
                     <?php $display = displayErrors($error, 'email');
                     echo $display ?>
                   </div>
-                <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="email" value="<?php echo $value['email'] ?>" required>
+                <input type="text" name="email" class="form-control" id="validationCustom01" placeholder="email" >
               </div>
 
               
@@ -122,7 +122,7 @@ if(array_key_exists('submit', $_POST)){
                   <?php $display = displayErrors($error, 'editor1');
                   echo $display ?>
                 </div>
-              <textarea name="editor1" ><?php echo $value['editor1'] ?></textarea>
+              <textarea name="editor1" ></textarea>
             </div>
 
             </div>
