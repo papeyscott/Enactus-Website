@@ -136,64 +136,63 @@ input:checked + .slider:before {
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
-                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"><a href="index.php"> <img src="">Navigation</a> </span></h3>
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"><a href="index.php"> <img src="image/logo.png" height="45" width="130"></a> </span></h3>
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
                         <a href="index.php" class="waves-effect"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Dashboard</a>
                     </li>
 
+                    
 
                     <li>
                         <a href="Visitors-Manager.php" class="waves-effect"><i class="fa fa-eye fa-fw" aria-hidden="true"></i>Visitors Manager</a>
                     </li>
 
                      <li>
-                        <a href="viewTeams.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Teams</a>
+                        <a href="viewTeams.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Teams Directory</a>
                     </li>
-
-                    <li>
-                        <a href="viewAlumni.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Alumni</a>
-                    </li>
-                    <li>
-                        <a href="viewCampus.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Campus</a>
-                    </li>
-
                     <li>
                         <a href="viewBoard.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Board of Directors</a>
                     </li>
 
-                   <!--   <li>
-                        <a href="View-Student.php" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i>Student Manager</a>
-                    </li>-->
-
-
-                   <li>
-                        <a href="View-Delivery.php" class="waves-effect"><i class="fa fa-truck fa-fw" aria-hidden="true"></i>Delivery</a>
+                    <li>
+                        <a href="viewAlumni.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Alumni Portfolio</a>
                     </li>
+                    <li>
+                        <a href="viewCampus.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Campus Activities</a>
+                    </li>
+
+                    <li>
+                        <a href="viewConference.php" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Leadership Conference</a>
+                    </li>
+
+                    <li>
+                        <a href="viewNationals.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>National Competition</a>
+                    </li>
+
+                    <li>
+                        <a href="viewSpecial.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Special Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="viewproject.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Project Feature</a>
+                    </li>
+                    <li>
+                        <a href="viewStaffs.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Staffs</a>
+                    </li>
+
+                    <li>
+                        <a href="viewPartners.php" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Partners and Sponsors</a>
+                    </li>
+
                     
+                 
+
                    
 
-
-
-
-                  <!--   <li>
-                        <a href="fontawesome.html" class="waves-effect"><i class="fa fa-font fa-fw" aria-hidden="true"></i>Icons</a>
-                    </li>
-                    <li>
-                        <a href="map-google.html" class="waves-effect"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>Google Map</a>
-                    </li>
-                    <li>
-                        <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw" aria-hidden="true"></i>Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="404.html" class="waves-effect"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Error 404</a>
-                    </li> -->
-
                 </ul>
-                <div class="center p-20">
-                     <a href="Book-Visitor.php" class="btn btn-danger btn-block">Register a Visitor</a>
-                 </div>
+        
 
 <?php
 if(isset($_SESSION['id'])){
@@ -201,9 +200,7 @@ if(isset($_SESSION['id'])){
 ?>
 
 
-<div class="center p-20">
-                     <a href="logout.php" class="btn btn-danger btn-block">Logout</a>
-                 </div>
+
 <?php } ?>
             </div>
 

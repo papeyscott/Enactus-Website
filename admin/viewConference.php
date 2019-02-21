@@ -5,7 +5,7 @@ include 'includes/authentication.php';
 include 'includes/db.php';
 include 'includes/function.php';
 include ("includes/header.php");
-$employee = getAllData($conn,'alumni');
+$employee = getAllData($conn,'conference');
 //for serial numbering;
 $dev = [];
 for($var=1;  $var <= count($employee); $var++  ){
@@ -36,12 +36,12 @@ $employee = $newArray;
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Alumni Log</h4> </div>
+                        <h4 class="page-title">Leadership Conference Log </h4> </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
 
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Alumni Log</li>
+                            <li class="active">Leadership Conference Log </li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -74,10 +74,10 @@ $employee = $newArray;
                   </div>';
                   } ?>
                     <div class="col-lg-4 col-sm-6 col-xs-12">
-                        <a href="AddAlumni.php">
+                        <a href="addConference.php">
 
                             <div class="white-box" style="background-color: #95e297">
-                            <h3 class="box-title text-center"><strong style="font-size: 25px;"> ADD Alumni </strong></h3>
+                            <h3 class="box-title text-center"><strong style="font-size: 25px;"> ADD Leadership Conference </strong></h3>
 
                         </div>
                         </a>
@@ -90,15 +90,15 @@ $employee = $newArray;
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Alumni Log</h3>
+                            <h3 class="box-title">Leadership Conference Log</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
                                             <th>Picture</th>
-                                            <th><a href="profile.php">Name</a></th>
-                                            <th>Email</th>
+                                            <th><a href="profile.php">Title</a></th>
+                                            
                                             <th>Story</th>
                                             <th>Edit</th>
                                             <th>Delete</th>
@@ -112,21 +112,20 @@ $employee = $newArray;
                                           <tr>
                                             <td><?php echo $value['sn'] ?></td></td>
                                             <td><img src="<?php echo $value['image'] ?>" height="50" width="50"></td>
-                                            <td><?php echo $value['name'] ?></td>
-                                            <td><?php echo $value['email'] ?></td>
+                                            <td><?php echo $value['title'] ?></td>
                                             <td><?php
-                    $desc = $value['editor1'];
-                  $strcut = substr($desc,0,100);
-              $desc = substr($strcut,0,strrpos($strcut, ' ')).'...';
-                  echo $desc;
-                  
-                 ?></td>
+                                                    $desc = $value['editor1'];
+                                                  $strcut = substr($desc,0,100);
+                                              $desc = substr($strcut,0,strrpos($strcut, ' ')).'...';
+                                                  echo $desc;
+                                                  
+                                                 ?></td>
 
                                             <!-- <th>Date</th> -->
                                             <?php $urii = explode("/", $_SERVER['REQUEST_URI']);
                                               $retUrl = end($urii); ?>
-                                             <td> <a href="alumniProfile.php?tdata=alumni&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>">  <i class="btn btn-warning fa fa-pencil" aria-hidden="true"></i></a></td>
-                                              <td><a href="delete.php?tdata=alumni&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>"><i class="btn btn-danger fa fa-trash" aria-hidden="true"></i></a></td>
+                                             <td> <a href="conferenceProfile.php?tdata=conference&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>">  <i class="btn btn-warning fa fa-pencil" aria-hidden="true"></i></a></td>
+                                              <td><a href="delete.php?tdata=conference&vdata=<?php echo $value['id'] ?>&ret=<?php echo $retUrl ?>"><i class="btn btn-danger fa fa-trash" aria-hidden="true"></i></a></td>
                                                 </tr>
                                             <?php } ?>
 

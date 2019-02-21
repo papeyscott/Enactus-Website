@@ -113,7 +113,13 @@ $employee = $newArray;
                                             <td><?php echo $value['sn'] ?></td></td>
                                             <td><img src="<?php echo $value['image'] ?>" height="50" width="50"></td>
                                             <td><?php echo $value['title'] ?></td>
-                                            <td><?php echo $value['editor1'] ?></td>
+                                            <td><?php
+                                                    $desc = $value['editor1'];
+                                                  $strcut = substr($desc,0,100);
+                                              $desc = substr($strcut,0,strrpos($strcut, ' ')).'...';
+                                                  echo $desc;
+                                                  
+                                                 ?></td>
 
                                             <!-- <th>Date</th> -->
                                             <?php $urii = explode("/", $_SERVER['REQUEST_URI']);

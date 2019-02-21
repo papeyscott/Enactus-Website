@@ -5,39 +5,7 @@ include 'includes/db.php';
 include 'includes/function.php';
 include 'includes/authentication.php';
 include ("includes/header.php");
-//get all table data
-/*$visitor = getAllData($conn,'visitors');
-$visitor_today = getAllDataToday($conn,'visitors');
-$employee = getAllData($conn,'employee');
-$student = getAllData($conn,'student');
 
-//get all data count
-$student_count = count($student);
-$visitor_count = count($visitor);
-$visitor_count_today = count($visitor_today);
-$employee_count = count($employee);
-
-//get Specific Data
-$on_visitor = getSpecificData($conn,'visitors','status','signed in');
-$off_visitor = getSpecificData($conn,'visitors','status','signed out');
-
-$on_visitor_today = getSpecificDataToday($conn,'visitors','status','signed in');
-$off_visitor_today = getSpecificDataToday($conn,'visitors','status','signed out');
-
-$academic_employee = getSpecificData($conn,'employee','staff_status','Academic');
-$nacademic_employee = getSpecificData($conn,'employee','staff_status','Non-Academic');
-$primary_student = getSpecificData($conn,'student','school_category','Primary');
-$secondary_student = getSpecificData($conn,'student','school_category','Secondary');
-
-$on_count = count($on_visitor);
-$off_count = count($off_visitor);
-$on_count_today = count($on_visitor_today);
-$off_count_today = count($off_visitor_today);
-$academic_count = count($academic_employee);
-$nacademic_count = count($nacademic_employee);
-$primary_count = count($primary_student);
-$secondary_count = count($secondary_student);
-*/
 
 ?>
         <!-- ============================================================== -->
@@ -49,8 +17,12 @@ $secondary_count = count($secondary_student);
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
                         <h4 class="page-title">Dashboard</h4> </div>
 
+                        
+                             <a href="logout.php" class="btn btn-danger float-left">Logout</a>
+                     
                     <!-- /.col-lg-12 -->
                 </div>
+
                 <!-- /.row -->
                 <!-- ============================================================== -->
                 <!-- Different data widgets -->
